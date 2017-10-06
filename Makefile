@@ -11,6 +11,7 @@ main.o: main.cpp
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c -o $@ $^
+
 main: main.o MyNotifier.o
 	$(CC) -o main.bin main.o MyNotifier.o $(CFLAGS)
 
