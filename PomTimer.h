@@ -11,23 +11,21 @@
 
 class PomTimer {
 private:
+    static const uint8_t reminderTime = 1;
     uint8_t timerTime = 25;
-    uint8_t reminderTime = 1;
     uint8_t shortRestTime = 5;
     uint8_t longRestTime = 15;
     uint32_t poms = 0;
-    uint64_t elapsedTime;
+    uint8_t unrestedPoms = 0;
+    time_t pomTime = 0;
+    double elapsedTime = 0;
 public:
-    //PomTimer();
+    static uint8_t getReminderTime();
     void startTimer();
     void stopTimer();
     void setPomTime(uint8_t min)
     {
         timerTime = min;
-    }
-    void setPomOverflowReminderTime(uint8_t min)
-    {
-        reminderTime = min;
     }
     void setPomShortRestTime(uint8_t min)
     {
