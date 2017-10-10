@@ -4,8 +4,12 @@
 
 #include <iostream>
 #include "MyNotifier.h"
+#include "PomTimer.h"
 
 int main()
 {
-    sendNotification("Title", "Notificationtext");
+    PomTimer pomTimer = PomTimer();
+    pomTimer.startTimer();
+    while(1);
+    //sendNotification("Title", "Notificationtext");
 }

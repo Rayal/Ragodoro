@@ -5,8 +5,9 @@
 #ifndef NOTIFICATIONTEST_POMTIMER_H
 #define NOTIFICATIONTEST_POMTIMER_H
 
-#include <cstdint>
+//#include <cstdint>
 #include <ctime>
+#include <cstdint>
 
 class PomTimer {
 private:
@@ -17,7 +18,7 @@ private:
     uint32_t poms = 0;
     uint64_t elapsedTime;
 public:
-    PomTimer();
+    //PomTimer();
     void startTimer();
     void stopTimer();
     void setPomTime(uint8_t min)
